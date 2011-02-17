@@ -1,0 +1,13 @@
+name: Tutorial
+description: Tutorial Stuff
+author: awesomepants
+#website: www.example.com
+main: org.bukkit.awesomepants.Tutorial
+version: 0.1
+#commands:
+#    example:
+#        description: Example command
+#        usage: /<command>
+#    poke:
+#        description: Example with arguement, poke a player.
+#        usage: /<command> [player]

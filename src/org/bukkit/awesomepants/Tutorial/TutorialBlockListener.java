@@ -1,4 +1,4 @@
-package org.bukkit.awesomepants.Tutorial;
+package org.bukkit.awesomepants.tutorial;
 
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
@@ -11,12 +11,13 @@ import org.bukkit.event.block.BlockPhysicsEvent;
  * Tutorial block listener
  * @author awesomepants
  */
-public class TutorialBlockListener extends BlockListener {
+public class TutorialBlockListener extends BlockListener
+{
     private final Tutorial plugin;
 
-    public TutorialBlockListener(final Tutorial plugin) {
-        this.plugin = plugin;
+    public TutorialBlockListener(final Tutorial plugin)
+    {
+	this.plugin = plugin;
     }
-
     //put all Block related code here
 }

@@ -1,13 +1,13 @@
 name: Tutorial
 description: Tutorial Stuff
-author: awesomepants
-#website: www.example.com
-main: org.bukkit.awesomepants.Tutorial
+author: Kaletam
+website: http://bukkitfun.tumblr.com/
+main: org.bukkit.awesomepants.tutorial.Tutorial
 version: 0.1
-#commands:
-#    example:
-#        description: Example command
-#        usage: /<command>
-#    poke:
-#        description: Example with arguement, poke a player.
-#        usage: /<command> [player]
+commands:
+    tutorial:
+        description: Long command form.
+        usage: /<command>
+    tut:
+        description: Short command form.
+        usage: /<command> [player]

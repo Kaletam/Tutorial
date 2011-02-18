@@ -1,4 +1,4 @@
-package org.bukkit.awesomepants.Tutorial;
+package org.bukkit.awesomepants.tutorial;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -11,13 +11,13 @@ import org.bukkit.event.player.PlayerMoveEvent;
  * Handle events for all Player related events
  * @author awesomepants
  */
-public class TutorialPlayerListener extends PlayerListener {
+public class TutorialPlayerListener extends PlayerListener
+{
     private final Tutorial plugin;
 
-    public TutorialPlayerListener(Tutorial instance) {
-        plugin = instance;
+    public TutorialPlayerListener(Tutorial instance)
+    {
+	plugin = instance;
     }
-
     //Insert Player related code here
 }
-

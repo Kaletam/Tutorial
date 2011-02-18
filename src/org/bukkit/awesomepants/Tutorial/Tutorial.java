@@ -2,6 +2,7 @@ package org.bukkit.awesomepants.tutorial;
 
 // Java imports
 import java.io.File;
+import java.util.List;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -72,87 +73,8 @@ public class Tutorial extends JavaPlugin
     @Override
     public boolean onCommand(CommandSender sender, Command command, String commandLabel, String[] args)
     {
-	Player p = (Player) sender;
+	TutorialCommandHandler handler = new TutorialCommandHandler(sender, command, args, this);
 
-	// This method for getting subcommands stolen from HotSwap.
-	SubCommands sub = null;
-
-	try
-	{
-	    sub = SubCommands.valueOf(args[0].toUpperCase());
-	}
-	catch (Exception ex) // Don't actually do anything, just return false (triggering display of usage as per plugin.yml).
-	{
-	    return false;
-	}
-
-	String targetName = "";
-
-	if (args.length > 1)
-	{
-	    targetName = args[1];
-	}
-
-	if ((sender instanceof Player)) // If executed by the player.
-	{
-	    String format = "";
-
-	    switch (sub)
-	    {
-		case GETPLAYER:
-		    if (targetName == "")
-		    {
-			return false;
-		    }
-
-		    if (getServer().getPlayer(targetName) != null)
-		    {
-			format = String.format("%s is a Player.", targetName);
-		    }
-		    else
-		    {
-			format = String.format("%s is not a Player.", targetName);
-		    }
-
-		    log.log(Level.INFO, format);
-
-		    return true;
-		case GETPLAYERBLANK:
-		    // This either gets the current player or the first player. Must test further.
-		    if (getServer().getPlayer("") != null)
-		    {
-			p = getServer().getPlayer("");
-
-			format = String.format("Name: %s; IP: %s", p.getName(), p.getAddress());
-
-			log.log(Level.INFO, format);
-
-			format = String.format("%s is a Player.", targetName);
-		    }
-		    else
-		    {
-			format = String.format("%s is not a Player.", targetName);
-		    }
-
-		    log.log(Level.INFO, format);
-
-		    return true;
-		case GETPLAYERS:
-		    return true;
-		case MATCHPLAYER:
-		    return true;
-	    }
-
-
-	    return true;
-	}
-
-	return false;
-    }
-
-    // This method for getting subcommands stolen from HotSwap.
-    private enum SubCommands
-    {
-	GETPLAYER, MATCHPLAYER, GETPLAYERS, GETPLAYERBLANK
+	return handler.Execute();
     }
 }

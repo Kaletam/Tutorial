@@ -1,4 +1,4 @@
-package org.bukkit.awesomepants.tutorial;
+package com.chrissquared.awesomepants.tutorial;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Player;

@@ -1,4 +1,4 @@
-package org.bukkit.awesomepants.tutorial;
+package com.chrissquared.awesomepants.tutorial;
 
 // Java imports
 import java.io.File;

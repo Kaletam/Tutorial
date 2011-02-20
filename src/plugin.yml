@@ -1,8 +1,6 @@
-## YAML Template.
----
 name: Tutorial
-main: org.bukkit.awesomepants.tutorial.Tutorial
-version: 0.2
+main: com.chrissquareds.awesomepants.tutorial.Tutorial
+version: 0.3
 website: http://bukkitfun.tumblr.com/
 author: AwesomePants
 description: Tutorial Stuff
